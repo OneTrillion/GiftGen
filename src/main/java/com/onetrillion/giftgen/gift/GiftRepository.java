@@ -6,5 +6,4 @@ import java.util.List;
 
 public interface GiftRepository extends MongoRepository<Gift, String> {
     List<Gift> findGiftsByCategory(Category category);
-
 }

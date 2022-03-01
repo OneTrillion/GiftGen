@@ -2,12 +2,12 @@ import './App.css';
 import {Row, Col, Button, Form} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useEffect, useState} from "react";
-import {getAllGifts, getParentsGifts} from "./client";
+import {getAllGifts, getGiftByCategory, getParentsGifts} from "./client";
 import Gift from "./components/Gift";
 
 function App() {
-    const [value, setValue] = useState("random");
-    const [gifts, setGifts] = useState(["no gifts"]);
+    const [value, setValue] = useState("featured");
+    const [gifts, setGifts] = useState([]);
 
     const handleOnChange = (e) => {
         setValue(e.target.value);
@@ -15,7 +15,8 @@ function App() {
 
     const fetchGifts = () => {
         console.log(value);
-        getParentsGifts()
+        console.log(typeof value);
+        getGiftByCategory(value)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -25,25 +26,22 @@ function App() {
         })
     }
 
-    /*
     useEffect(() => {
         console.log("component is mounted");
         fetchGifts();
     }, []);
 
-     */
-
   return (
     <div className="App">
         <Row>
-            <Col><h1>Placeholder</h1></Col>
+            <Col><h1>Gifts for {value}</h1></Col>
         </Row>
         <Row>
             {gifts.map((gift) => <Gift key={gift.id} giftInfo={gift}/>)}
         </Row>
        <Row>
            <Col><Form.Control as="select" custom onChange={handleOnChange} defaultValue={value}>
-               <option value="random">Random</option>
+               <option value="featured">Featured</option>
                <option value="parent">Parent</option>
                <option value="partner">Partner</option>
                <option value="friend">Friend</option>

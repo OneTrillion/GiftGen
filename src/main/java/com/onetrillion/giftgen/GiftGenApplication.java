@@ -14,7 +14,7 @@ public class GiftGenApplication {
     public static void main(String[] args) {
         SpringApplication.run(GiftGenApplication.class, args);
     }
-/*
+    /*
     @Bean
     CommandLineRunner runner(GiftRepository repository){
         return args -> {
@@ -32,6 +32,7 @@ public class GiftGenApplication {
             repository.insert(gift);
             repository.insert(gift2);
 
+
             repository.findStudentByEmail(email)
                     .ifPresentOrElse(s -> {
                         System.out.println(s + " already exists");
@@ -43,9 +44,10 @@ public class GiftGenApplication {
 
 
 
+
+
         };
 
 
-    }
- */
+    }*/
 }

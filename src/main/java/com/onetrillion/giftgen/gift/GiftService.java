@@ -14,4 +14,7 @@ public class GiftService {
 
     public List<Gift> getParentsGifts() {return giftRepository.findGiftsByCategory(Category.PARENT);}
 
+    public List<Gift> getPartnersGifts() {return giftRepository.findGiftsByCategory(Category.PARTNER);}
+
+    public List<Gift> getFriendsGifts() {return giftRepository.findGiftsByCategory(Category.FRIEND);}
 }

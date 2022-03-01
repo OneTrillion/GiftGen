@@ -18,3 +18,8 @@ export const getAllGifts = () =>
 export const getParentsGifts = () =>
     fetch("api/v1/Gifts/parents")
         .then(checkStatus);
+
+
+export const getGiftByCategory = (giftCategory) =>
+    fetch(`api/v1/Gifts/${giftCategory}`)
+        .then(checkStatus);
