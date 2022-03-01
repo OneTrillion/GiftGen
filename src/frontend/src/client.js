@@ -1,3 +1,5 @@
+import fetch from 'unfetch';
+
 const checkStatus = response => {
     if (response.ok) {
         return response;
@@ -7,3 +9,12 @@ const checkStatus = response => {
     error.response = response;
     return Promise.reject(error);
 }
+
+export const getAllGifts = () =>
+    fetch("api/v1/Gifts/all")
+        .then(checkStatus);
+
+
+export const getParentsGifts = () =>
+    fetch("api/v1/Gifts/parents")
+        .then(checkStatus);

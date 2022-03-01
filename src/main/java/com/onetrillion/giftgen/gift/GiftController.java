@@ -13,6 +13,9 @@ import java.util.List;
 public class GiftController {
     private final GiftService giftService;
 
-    @GetMapping
+    @GetMapping("/all")
     public List<Gift> fetchAllGifts() {return giftService.getAllGifts();}
+
+    @GetMapping("/parents")
+    public List<Gift> fetchParentsGifts() {return giftService.getParentsGifts();}
 }

@@ -11,9 +11,11 @@ public class Gift {
     private String id;
     private String name;
     private String price;
+    private Category category;
 
-    public Gift(String name, String price) {
+    public Gift(String name, String price, Category category) {
         this.name = name;
         this.price = price;
+        this.category = category;
     }
 }
