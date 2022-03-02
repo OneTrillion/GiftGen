@@ -21,17 +21,67 @@ public class GiftGenApplication {
             Gift gift = new Gift(
                     "Toothbrush",
                     "200",
-                    Category.FRIEND
+                    Category.FRIEND,
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor leo a diam sollicitudin tempor id eu nisl nunc. Cursus vitae congue mauris rhoncus.",
+                    "https://loremipsum.io/generator/?n=1&t=p"
             );
             Gift gift2 = new Gift(
                     "Phone",
-                    "5000",
-                    Category.PARENT
+                    "33200",
+                    Category.PARTNER,
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor leo a diam sollicitudin tempor id eu nisl nunc. Cursus vitae congue mauris rhoncus.",
+                    "https://loremipsum.io/generator/?n=1&t=p"
             );
-
+            Gift gift3 = new Gift(
+                    "Grape",
+                    "2",
+                    Category.FRIEND,
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor leo a diam sollicitudin tempor id eu nisl nunc. Cursus vitae congue mauris rhoncus.",
+                    "https://loremipsum.io/generator/?n=1&t=p"
+            );
+            Gift gift4 = new Gift(
+                    "Keyboard",
+                    "2070",
+                    Category.PARENT,
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor leo a diam sollicitudin tempor id eu nisl nunc. Cursus vitae congue mauris rhoncus.",
+                    "https://loremipsum.io/generator/?n=1&t=p"
+            );
+            Gift gift5 = new Gift(
+                    "Paper",
+                    "99",
+                    Category.PARENT,
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor leo a diam sollicitudin tempor id eu nisl nunc. Cursus vitae congue mauris rhoncus.",
+                    "https://loremipsum.io/generator/?n=1&t=p"
+            );
+            Gift gift6 = new Gift(
+                    "Ring",
+                    "90000",
+                    Category.PARTNER,
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor leo a diam sollicitudin tempor id eu nisl nunc. Cursus vitae congue mauris rhoncus.",
+                    "https://loremipsum.io/generator/?n=1&t=p"
+            );
+            Gift gift7 = new Gift(
+                    "Book",
+                    "199",
+                    Category.FRIEND,
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor leo a diam sollicitudin tempor id eu nisl nunc. Cursus vitae congue mauris rhoncus.",
+                    "https://loremipsum.io/generator/?n=1&t=p"
+            );
+            Gift gift8 = new Gift(
+                    "Mouse",
+                    "499",
+                    Category.PARENT,
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor leo a diam sollicitudin tempor id eu nisl nunc. Cursus vitae congue mauris rhoncus.",
+                    "https://loremipsum.io/generator/?n=1&t=p"
+            );
             repository.insert(gift);
             repository.insert(gift2);
-
+            repository.insert(gift3);
+            repository.insert(gift4);
+            repository.insert(gift5);
+            repository.insert(gift6);
+            repository.insert(gift7);
+            repository.insert(gift8);
 
             repository.findStudentByEmail(email)
                     .ifPresentOrElse(s -> {
@@ -45,9 +95,7 @@ public class GiftGenApplication {
 
 
 
-
         };
-
 
     }*/
 }

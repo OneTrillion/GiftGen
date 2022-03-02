@@ -12,10 +12,14 @@ public class Gift {
     private String name;
     private String price;
     private Category category;
+    private String description;
+    private String buyLink;
 
-    public Gift(String name, String price, Category category) {
+    public Gift(String name, String price, Category category, String description, String buyLink) {
         this.name = name;
         this.price = price;
         this.category = category;
+        this.description = description;
+        this.buyLink = buyLink;
     }
 }
