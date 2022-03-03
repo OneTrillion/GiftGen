@@ -35,17 +35,16 @@ function App() {
         })
     }
     useEffect(() => {
-        console.log("component is mounted");
         fetchGifts();
     }, []);
   return (
     <div className="App">
         <Row>
-            <Col>
-                <Image src={"/giftIcon.png"} fluid/>
+            <Col md={"auto"}>
+                <Image src={"/giftGenLogo.png"} fluid className={"float-start"} style={{paddingLeft: '15vh', height: '150px'}}/>
             </Col>
             <Col>
-                <h1>GiftGen</h1>
+                <h1 className={"float-start"} style={{paddingTop: '4vh', fontSize: '3rem'}}>GiftGen</h1>
             </Col>
         </Row>
 
@@ -63,7 +62,7 @@ function App() {
             </Row>
             <Row className={'d-flex justify-content-center'}>
                 <Col md={3} style={{padding: 0}} >
-                    <Form.Control as="select" onChange={handleOnChange} defaultValue={menuValue} >
+                    <Form.Control as="select" onChange={handleOnChange} defaultValue={menuValue} className={"giftForm"}>
                         <option value="featured">Featured</option>
                         <option value="parent">Parent</option>
                         <option value="partner">Partner</option>
